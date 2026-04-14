@@ -43,14 +43,13 @@ export default function HomePage({ data }) {
             alt="Logo ANTAQ"
             className="hero__logo"
           />
-          <div>
-            <h1>Agenda Regulatória</h1>
-            <p>
-              Painel rápido para acompanhar temas, macroetapas, processos SEI e
-              relatorias.
-            </p>
-          </div>
+          <h1>Agenda Regulatória</h1>
         </div>
+
+        <p className="hero__subtitle">
+          Painel rápido para acompanhar temas, macroetapas, processos SEI e
+          relatorias.
+        </p>
       </header>
 
       <section className="summary">

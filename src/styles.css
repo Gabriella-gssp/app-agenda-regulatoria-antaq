@@ -50,7 +50,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero h1 {
-  margin: 0 0 10px;
+  margin: 0;
   font-size: 4.3rem;
   line-height: 1;
 }
@@ -318,35 +318,72 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 700px) {
+  .page {
+    max-width: 100%;
+    padding: 18px 14px 36px;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    padding: 22px 18px;
+    border-radius: 26px;
+  }
+
+  .hero__top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .hero__logo {
+    width: 82px;
+    height: 82px;
+  }
+
+  .hero h1 {
+    margin: 0;
+    font-size: 2.15rem;
+    line-height: 1.02;
+  }
+
+  .hero__subtitle {
+    margin: 16px 0 0;
+    text-align: center;
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  .summary {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 18px 0 22px;
+  }
+
+  .summary__box {
+    padding: 20px 20px;
+  }
+
+  .summary__box strong {
+    font-size: 2.4rem;
+  }
+
+  .axis-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .axis-card {
+    min-height: 150px;
+    padding: 24px 16px;
+  }
+
   .toolbar {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    padding: 22px 20px;
-  }
-
-  .hero__top {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  justify-content: center;
-  }
-
-  .hero__logo {
-    width: 80px;
-    height: 80px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-    line-height: 1.05;
-    margin: 0;
-  }
-
-  .hero__subtitle {
-    margin-top: 16px;
-    text-align: center;
-    font-size: 0.95rem;
+  .theme-card__bottom {
+    gap: 10px;
+    flex-direction: column;
   }
 }
