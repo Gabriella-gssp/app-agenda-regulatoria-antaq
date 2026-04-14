@@ -39,7 +39,7 @@ export default function HomePage({ data }) {
       <header className="hero">
         <div className="hero__top">
           <img
-            src="/logo-antaq.png"
+            src={`${import.meta.env.BASE_URL}logo-antaq.png`}
             alt="Logo ANTAQ"
             className="hero__logo"
           />
