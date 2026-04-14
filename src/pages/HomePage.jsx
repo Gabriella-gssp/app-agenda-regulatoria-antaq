@@ -64,6 +64,8 @@ export default function HomePage({ data }) {
         </div>
       </section>
 
+      <AgendaStatusChart data={data} />
+
       <section className="axis-grid">
         {axes.map((axis) => (
           <AxisCard
