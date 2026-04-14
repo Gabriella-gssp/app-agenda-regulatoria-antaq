@@ -382,8 +382,22 @@ a { color: inherit; text-decoration: none; }
     grid-template-columns: 1fr;
   }
 
+  .theme-card__top {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
   .theme-card__bottom {
     gap: 10px;
     flex-direction: column;
+  }
+
+  .status-badge {
+    white-space: normal;
+    text-align: center;
+    max-width: 210px;
+    line-height: 1.2;
+    padding: 8px 12px;
+    font-size: 0.88rem;
   }
 }
