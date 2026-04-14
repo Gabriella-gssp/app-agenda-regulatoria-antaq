@@ -1,6 +1,7 @@
 ﻿import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import AxisCard from "../components/AxisCard";
+import AgendaStatusChart from "../components/AgendaStatusChart";
 
 const REPORT_URL =
   "https://www.gov.br/antaq/pt-br/acesso-a-informacao/acoes-e-programas/governanca-regulatoria/agenda-regulatoria-ar/agenda-regulatoria-2025-2028";
