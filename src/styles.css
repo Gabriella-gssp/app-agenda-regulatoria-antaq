@@ -20,51 +20,52 @@ body {
 a { color: inherit; text-decoration: none; }
 
 .page {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 24px 16px 40px;
+  padding: 28px 24px 48px;
 }
 
 .hero {
   background: linear-gradient(135deg, #1f56df, #2d66ef);
   color: white;
-  padding: 28px 30px;
-  border-radius: 28px;
+  padding: 34px 38px;
+  border-radius: 32px;
   box-shadow: var(--shadow);
 }
 
 .hero__top {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
 }
 
 .hero__logo {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
   background: transparent;
   padding: 0;
   border-radius: 20px;
+  flex-shrink: 0;
 }
 
 .hero h1 {
-  margin: 0 0 8px;
-  font-size: 3rem;
-  line-height: 1.05;
+  margin: 0 0 10px;
+  font-size: 4.3rem;
+  line-height: 1;
 }
 
-.hero p {
-  margin: 0;
+.hero__subtitle {
+  margin: 14px 0 0;
   opacity: 0.96;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 .summary {
   display: grid;
-  grid-template-columns: repeat(2, minmax(160px, 1fr));
-  gap: 12px;
-  margin: 18px 0 24px;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 22px 0 30px;
 }
 
 .summary__box,
@@ -78,7 +79,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .summary__box {
-  padding: 18px;
+  padding: 22px 24px;
 }
 
 .summary__box span {
@@ -87,18 +88,19 @@ a { color: inherit; text-decoration: none; }
 }
 
 .summary__box strong {
-  font-size: 2rem;
+  font-size: 2.7rem;
 }
 
 .axis-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 18px;
 }
 
 .axis-card {
   border: 1px solid #e8edf6;
-  padding: 24px 16px;
+  padding: 30px 20px;
+  min-height: 190px;
   cursor: pointer;
   text-align: center;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -325,21 +327,26 @@ a { color: inherit; text-decoration: none; }
   }
 
   .hero__top {
-    align-items: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
   }
 
   .hero__logo {
-    width: 78px;
-    height: 78px;
-    background: transparent;
-    padding: 0;
+    width: 80px;
+    height: 80px;
   }
 
   .hero h1 {
     font-size: 2.2rem;
+    line-height: 1.05;
+    margin: 0;
   }
 
-  .hero p {
-    font-size: 0.98rem;
+  .hero__subtitle {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 0.95rem;
   }
 }
