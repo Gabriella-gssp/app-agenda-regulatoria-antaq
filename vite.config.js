@@ -12,8 +12,8 @@ export default defineConfig({
         enabled: true
       },
       manifest: {
-        name: "Agenda Regulatória ANTAQ",
-        short_name: "Agenda Regulatória",
+        name: "Agenda de Impacto Regulatório ANTAQ",
+        short_name: "Agenda AIR",
         description: "Acompanhamento dos temas da Agenda Regulatória da ANTAQ",
         theme_color: "#1d4ed8",
         background_color: "#f5f7fb",
