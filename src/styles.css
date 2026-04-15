@@ -367,6 +367,7 @@ a { color: inherit; text-decoration: none; }
   gap: 8px;
   font-size: 0.95rem;
   font-weight: 500;
+  word-break: break-word;
 }
 
 .legend-color {
@@ -480,10 +481,22 @@ a { color: inherit; text-decoration: none; }
     height: 180px;
     margin: 0 auto;
   }
+ 
   .status-chart-card__legend {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+ 
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
   }
 }
