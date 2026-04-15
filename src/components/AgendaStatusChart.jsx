@@ -3,8 +3,7 @@
   Pie,
   Cell,
   ResponsiveContainer,
-  Tooltip,
-  Legend
+  Tooltip
 } from "recharts";
 
 const COLORS = {
@@ -42,24 +41,39 @@ export default function AgendaStatusChart({ data }) {
       </div>
 
       <div className="status-chart-card__content">
-        <ResponsiveContainer width="100%" height={280}>
-          <PieChart>
-            <Pie
-              data={chartData}
-              dataKey="value"
-              nameKey="name"
-              innerRadius={70}
-              outerRadius={100}
-              paddingAngle={3}
-            >
-              {chartData.map((entry) => (
-                <Cell key={entry.name} fill={entry.color} />
-              ))}
-            </Pie>
-            <Tooltip />
-            <Legend />
-          </PieChart>
-        </ResponsiveContainer>
+        <div className="status-chart-card__inner">
+          <div className="status-chart-card__chart">
+            <ResponsiveContainer width="100%" height={180}>
+              <PieChart>
+                <Pie
+                  data={chartData}
+                  dataKey="value"
+                  nameKey="name"
+                  innerRadius={52}
+                  outerRadius={78}
+                  paddingAngle={3}
+                >
+                  {chartData.map((entry) => (
+                    <Cell key={entry.name} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Tooltip />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+
+          <div className="status-chart-card__legend">
+            {chartData.map((item) => (
+              <div key={item.name} className="legend-item">
+                <span
+                  className="legend-color"
+                  style={{ background: item.color }}
+                />
+                <span>{item.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
