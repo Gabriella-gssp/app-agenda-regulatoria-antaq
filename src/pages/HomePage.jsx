@@ -91,8 +91,8 @@ export default function HomePage({ data }) {
           rel="noreferrer"
         >
           <div className="axis-card__icon">🌐</div>
-          <div className="axis-card__title">Link Relatório</div>
-          <div className="axis-card__count">Abrir página da agenda</div>
+          <div className="axis-card__title">Site ANTAQ</div>
+          <div className="axis-card__count">Abrir página da Agenda Regulatória</div>
         </a>
       </section>
     </div>
