@@ -43,7 +43,7 @@ export default function AgendaStatusChart({ data }) {
       <div className="status-chart-card__content">
         <div className="status-chart-card__inner">
           <div className="status-chart-card__chart">
-            <ResponsiveContainer width="100%" height={180}>
+            <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
                   data={chartData}

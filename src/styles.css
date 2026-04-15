@@ -350,6 +350,9 @@ a { color: inherit; text-decoration: none; }
 .status-chart-card__chart {
   flex: 1;
   min-width: 0;
+  width: 100%;
+  max-width: 260px;
+  height: 180px;
 }
 
 .status-chart-card__legend {
@@ -470,6 +473,12 @@ a { color: inherit; text-decoration: none; }
     align-items: center;
   }
 
+  .status-chart-card__chart {
+    width: 100%;
+    max-width: 240px;
+    height: 180px;
+    margin: 0 auto;
+  }
   .status-chart-card__legend {
     flex-direction: row;
     justify-content: center;
