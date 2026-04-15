@@ -27,10 +27,27 @@ export default function AgendaStatusChart({ data }) {
 
   const inProgress = activeItems.length - notStarted - done;
 
+  const total = activeItems.length || 1;
+
   const chartData = [
-    { name: "Não iniciados", value: notStarted, color: COLORS.notStarted },
-    { name: "Em andamento", value: inProgress, color: COLORS.inProgress },
-    { name: "Concluídos", value: done, color: COLORS.done }
+    {
+      name: "Não iniciados",
+      value: notStarted,
+      color: COLORS.notStarted,
+      percentage: Math.round((notStarted / total) * 100)
+    },
+    {
+      name: "Em andamento",
+      value: inProgress,
+      color: COLORS.inProgress,
+      percentage: Math.round((inProgress / total) * 100)
+    },
+    {
+      name: "Concluídos",
+      value: done,
+      color: COLORS.done,
+      percentage: Math.round((done / total) * 100)
+    }
   ];
 
   return (
@@ -57,7 +74,12 @@ export default function AgendaStatusChart({ data }) {
                     <Cell key={entry.name} fill={entry.color} />
                   ))}
                 </Pie>
-                <Tooltip />
+                <Tooltip
+                  formatter={(value, name, props) => [
+                    `${value} tema(s) • ${props.payload.percentage}%`,
+                    name
+                  ]}
+                />
               </PieChart>
             </ResponsiveContainer>
           </div>
@@ -69,7 +91,9 @@ export default function AgendaStatusChart({ data }) {
                   className="legend-color"
                   style={{ background: item.color }}
                 />
-                <span>{item.name}</span>
+                <span>
+                  {item.name} ({item.percentage}%)
+                </span>
               </div>
             ))}
           </div>
